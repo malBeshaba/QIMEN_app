@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		045C76FC24DCD5C100C2FE4E /* ShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C76FB24DCD5C100C2FE4E /* ShowView.swift */; };
+		045C76FE24DCD60600C2FE4E /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C76FD24DCD60600C2FE4E /* SetView.swift */; };
+		045C770024DD6B8800C2FE4E /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C76FF24DD6B8800C2FE4E /* ViewData.swift */; };
+		047135AF24A87626004BD068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047135AE24A87626004BD068 /* AppDelegate.swift */; };
+		047135B124A87626004BD068 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047135B024A87626004BD068 /* SceneDelegate.swift */; };
+		047135B424A87626004BD068 /* QiMen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 047135B224A87626004BD068 /* QiMen.xcdatamodeld */; };
+		047135B824A8762B004BD068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047135B724A8762B004BD068 /* Assets.xcassets */; };
+		047135BB24A8762B004BD068 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047135BA24A8762B004BD068 /* Preview Assets.xcassets */; };
+		047135BE24A8762B004BD068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047135BC24A8762B004BD068 /* LaunchScreen.storyboard */; };
+		047135C624A8765E004BD068 /* TNCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047135C524A8765E004BD068 /* TNCalendar.swift */; };
+		047135C824A87758004BD068 /* QMStartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047135C724A87758004BD068 /* QMStartManager.swift */; };
+		048B59B424DC1DC4007F3DE8 /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B59B324DC1DC4007F3DE8 /* GridStack.swift */; };
+		048B59B624DC1DE9007F3DE8 /* GridCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B59B524DC1DE9007F3DE8 /* GridCalculator.swift */; };
+		048B59B824DC1E08007F3DE8 /* Array+chunked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B59B724DC1E08007F3DE8 /* Array+chunked.swift */; };
+		04A2848324E1370500A1B007 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A2848224E1370500A1B007 /* ContentView.swift */; };
+		04CC014624A9CBF7003215F8 /* QMData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC014524A9CBF7003215F8 /* QMData.swift */; };
+		04CC014824A9E0AA003215F8 /* SolarTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC014724A9E0AA003215F8 /* SolarTerm.swift */; };
+		04CC66BC24AC906200DBA260 /* FixedSizeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC66BB24AC906200DBA260 /* FixedSizeArray.swift */; };
+		04CC66C424AC9AB700DBA260 /* QiMenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC66C324AC9AB700DBA260 /* QiMenTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04CC66C624AC9AB700DBA260 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 047135A324A87626004BD068 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 047135AA24A87626004BD068;
+			remoteInfo = QiMen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		045C76FB24DCD5C100C2FE4E /* ShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowView.swift; sourceTree = "<group>"; };
+		045C76FD24DCD60600C2FE4E /* SetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
+		045C76FF24DD6B8800C2FE4E /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
+		047135AB24A87626004BD068 /* QiMen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiMen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		047135AE24A87626004BD068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		047135B024A87626004BD068 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		047135B324A87626004BD068 /* QiMen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QiMen.xcdatamodel; sourceTree = "<group>"; };
+		047135B724A8762B004BD068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		047135BA24A8762B004BD068 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		047135BD24A8762B004BD068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		047135BF24A8762B004BD068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047135C524A8765E004BD068 /* TNCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNCalendar.swift; sourceTree = "<group>"; };
+		047135C724A87758004BD068 /* QMStartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QMStartManager.swift; sourceTree = "<group>"; };
+		048B59B324DC1DC4007F3DE8 /* GridStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
+		048B59B524DC1DE9007F3DE8 /* GridCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCalculator.swift; sourceTree = "<group>"; };
+		048B59B724DC1E08007F3DE8 /* Array+chunked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+chunked.swift"; sourceTree = "<group>"; };
+		04A2848224E1370500A1B007 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04CC014524A9CBF7003215F8 /* QMData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QMData.swift; sourceTree = "<group>"; };
+		04CC014724A9E0AA003215F8 /* SolarTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarTerm.swift; sourceTree = "<group>"; };
+		04CC66BB24AC906200DBA260 /* FixedSizeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedSizeArray.swift; sourceTree = "<group>"; };
+		04CC66C124AC9AB700DBA260 /* QiMenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiMenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CC66C324AC9AB700DBA260 /* QiMenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiMenTests.swift; sourceTree = "<group>"; };
+		04CC66C524AC9AB700DBA260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		047135A824A87626004BD068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CC66BE24AC9AB700DBA260 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		045C76FA24DCD5B600C2FE4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				045C76FB24DCD5C100C2FE4E /* ShowView.swift */,
+				045C76FD24DCD60600C2FE4E /* SetView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		047135A224A87626004BD068 = {
+			isa = PBXGroup;
+			children = (
+				047135AD24A87626004BD068 /* QiMen */,
+				04CC66C224AC9AB700DBA260 /* QiMenTests */,
+				047135AC24A87626004BD068 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		047135AC24A87626004BD068 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				047135AB24A87626004BD068 /* QiMen.app */,
+				04CC66C124AC9AB700DBA260 /* QiMenTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		047135AD24A87626004BD068 /* QiMen */ = {
+			isa = PBXGroup;
+			children = (
+				045C76FF24DD6B8800C2FE4E /* ViewData.swift */,
+				045C76FA24DCD5B600C2FE4E /* View */,
+				048B59B924DC1F7A007F3DE8 /* GridStack */,
+				04CC66CB24AC9CA200DBA260 /* Server */,
+				047135AE24A87626004BD068 /* AppDelegate.swift */,
+				04A2848224E1370500A1B007 /* ContentView.swift */,
+				047135B024A87626004BD068 /* SceneDelegate.swift */,
+				047135B724A8762B004BD068 /* Assets.xcassets */,
+				047135BC24A8762B004BD068 /* LaunchScreen.storyboard */,
+				047135BF24A8762B004BD068 /* Info.plist */,
+				047135B224A87626004BD068 /* QiMen.xcdatamodeld */,
+				047135B924A8762B004BD068 /* Preview Content */,
+			);
+			path = QiMen;
+			sourceTree = "<group>";
+		};
+		047135B924A8762B004BD068 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				047135BA24A8762B004BD068 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		048B59B924DC1F7A007F3DE8 /* GridStack */ = {
+			isa = PBXGroup;
+			children = (
+				048B59B724DC1E08007F3DE8 /* Array+chunked.swift */,
+				048B59B524DC1DE9007F3DE8 /* GridCalculator.swift */,
+				048B59B324DC1DC4007F3DE8 /* GridStack.swift */,
+			);
+			path = GridStack;
+			sourceTree = "<group>";
+		};
+		04CC66C224AC9AB700DBA260 /* QiMenTests */ = {
+			isa = PBXGroup;
+			children = (
+				04CC66C324AC9AB700DBA260 /* QiMenTests.swift */,
+				04CC66C524AC9AB700DBA260 /* Info.plist */,
+			);
+			path = QiMenTests;
+			sourceTree = "<group>";
+		};
+		04CC66CB24AC9CA200DBA260 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				047135C524A8765E004BD068 /* TNCalendar.swift */,
+				047135C724A87758004BD068 /* QMStartManager.swift */,
+				04CC66BB24AC906200DBA260 /* FixedSizeArray.swift */,
+				04CC014524A9CBF7003215F8 /* QMData.swift */,
+				04CC014724A9E0AA003215F8 /* SolarTerm.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		047135AA24A87626004BD068 /* QiMen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 047135C224A8762B004BD068 /* Build configuration list for PBXNativeTarget "QiMen" */;
+			buildPhases = (
+				047135A724A87626004BD068 /* Sources */,
+				047135A824A87626004BD068 /* Frameworks */,
+				047135A924A87626004BD068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QiMen;
+			productName = QiMen;
+			productReference = 047135AB24A87626004BD068 /* QiMen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04CC66C024AC9AB700DBA260 /* QiMenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CC66C824AC9AB700DBA260 /* Build configuration list for PBXNativeTarget "QiMenTests" */;
+			buildPhases = (
+				04CC66BD24AC9AB700DBA260 /* Sources */,
+				04CC66BE24AC9AB700DBA260 /* Frameworks */,
+				04CC66BF24AC9AB700DBA260 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CC66C724AC9AB700DBA260 /* PBXTargetDependency */,
+			);
+			name = QiMenTests;
+			productName = QiMenTests;
+			productReference = 04CC66C124AC9AB700DBA260 /* QiMenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		047135A324A87626004BD068 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "王申宇";
+				TargetAttributes = {
+					047135AA24A87626004BD068 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					04CC66C024AC9AB700DBA260 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 047135AA24A87626004BD068;
+					};
+				};
+			};
+			buildConfigurationList = 047135A624A87626004BD068 /* Build configuration list for PBXProject "QiMen" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 047135A224A87626004BD068;
+			productRefGroup = 047135AC24A87626004BD068 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				047135AA24A87626004BD068 /* QiMen */,
+				04CC66C024AC9AB700DBA260 /* QiMenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		047135A924A87626004BD068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047135BE24A8762B004BD068 /* LaunchScreen.storyboard in Resources */,
+				047135BB24A8762B004BD068 /* Preview Assets.xcassets in Resources */,
+				047135B824A8762B004BD068 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CC66BF24AC9AB700DBA260 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		047135A724A87626004BD068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048B59B424DC1DC4007F3DE8 /* GridStack.swift in Sources */,
+				047135B424A87626004BD068 /* QiMen.xcdatamodeld in Sources */,
+				047135AF24A87626004BD068 /* AppDelegate.swift in Sources */,
+				04CC66BC24AC906200DBA260 /* FixedSizeArray.swift in Sources */,
+				045C770024DD6B8800C2FE4E /* ViewData.swift in Sources */,
+				04CC014824A9E0AA003215F8 /* SolarTerm.swift in Sources */,
+				048B59B824DC1E08007F3DE8 /* Array+chunked.swift in Sources */,
+				047135C624A8765E004BD068 /* TNCalendar.swift in Sources */,
+				045C76FC24DCD5C100C2FE4E /* ShowView.swift in Sources */,
+				045C76FE24DCD60600C2FE4E /* SetView.swift in Sources */,
+				04CC014624A9CBF7003215F8 /* QMData.swift in Sources */,
+				04A2848324E1370500A1B007 /* ContentView.swift in Sources */,
+				048B59B624DC1DE9007F3DE8 /* GridCalculator.swift in Sources */,
+				047135C824A87758004BD068 /* QMStartManager.swift in Sources */,
+				047135B124A87626004BD068 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CC66BD24AC9AB700DBA260 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CC66C424AC9AB700DBA260 /* QiMenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04CC66C724AC9AB700DBA260 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 047135AA24A87626004BD068 /* QiMen */;
+			targetProxy = 04CC66C624AC9AB700DBA260 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		047135BC24A8762B004BD068 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				047135BD24A8762B004BD068 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		047135C024A8762B004BD068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		047135C124A8762B004BD068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		047135C324A8762B004BD068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"QiMen/Preview Content\"";
+				DEVELOPMENT_TEAM = 46H3U2735R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = QiMen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wshenY.QiMen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		047135C424A8762B004BD068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"QiMen/Preview Content\"";
+				DEVELOPMENT_TEAM = 46H3U2735R;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = QiMen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wshenY.QiMen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04CC66C924AC9AB700DBA260 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46H3U2735R;
+				INFOPLIST_FILE = QiMenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wshenY.QiMenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiMen.app/QiMen";
+			};
+			name = Debug;
+		};
+		04CC66CA24AC9AB700DBA260 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46H3U2735R;
+				INFOPLIST_FILE = QiMenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wshenY.QiMenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiMen.app/QiMen";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		047135A624A87626004BD068 /* Build configuration list for PBXProject "QiMen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047135C024A8762B004BD068 /* Debug */,
+				047135C124A8762B004BD068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		047135C224A8762B004BD068 /* Build configuration list for PBXNativeTarget "QiMen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047135C324A8762B004BD068 /* Debug */,
+				047135C424A8762B004BD068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CC66C824AC9AB700DBA260 /* Build configuration list for PBXNativeTarget "QiMenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CC66C924AC9AB700DBA260 /* Debug */,
+				04CC66CA24AC9AB700DBA260 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		047135B224A87626004BD068 /* QiMen.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				047135B324A87626004BD068 /* QiMen.xcdatamodel */,
+			);
+			currentVersion = 047135B324A87626004BD068 /* QiMen.xcdatamodel */;
+			path = QiMen.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 047135A324A87626004BD068 /* Project object */;
+}
