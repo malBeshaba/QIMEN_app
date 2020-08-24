@@ -15,9 +15,9 @@ class UserSetting {
 }
 
 class QiMenTests: XCTestCase {
-    let qm1 = QMStartManager(year: 2006, month: 5, day: 23, hour: 19, minute: 25)
-    let qm2 = QMStartManager(year: 2020, month: 8, day: 10, hour: 18, minute: 15)
-    let qm3 = QMStartManager(year: 2020, month: 8, day: 18, hour: 19, minute: 45)
+    let qm1 = QMGenerator(year: 2006, month: 5, day: 23, hour: 19, minute: 25)
+    let qm2 = QMGenerator(year: 2020, month: 8, day: 10, hour: 18, minute: 15)
+    let qm3 = QMGenerator(year: 2020, month: 8, day: 18, hour: 19, minute: 45)
     let calendar = Calendar.current
     let setting = UserSetting()
 //    let qm4 = QMStartManager(year: calendar.component(.year, from: setting.date), month: calendar.component(.month, from: setting.date), day: calendar.component(.month, from: setting.date), hour: calendar.component(.hour, from: setting.time), minute: calendar.component(.minute, from: setting.time))
@@ -51,7 +51,7 @@ class QiMenTests: XCTestCase {
 //        print(qm2.getTime())
 //        print(qm3.clothEarthSite())
 //        print(qm3.getDutyDoor())
-        let qm4 = QMStartManager(year: calendar.component(.year, from: setting.date), month: calendar.component(.month, from: setting.date), day: calendar.component(.day, from: setting.date), hour: calendar.component(.hour, from: setting.time), minute: calendar.component(.minute, from: setting.time))
+        let qm4 = QMGenerator(year: calendar.component(.year, from: setting.date), month: calendar.component(.month, from: setting.date), day: calendar.component(.day, from: setting.date), hour: calendar.component(.hour, from: setting.time), minute: calendar.component(.minute, from: setting.time))
 //        print("calendor:\(calendar.component(.day, from: Date()))")
         print("DutyNum:\(qm4.getDutyNum())")
         print(qm4.clothSkySite())

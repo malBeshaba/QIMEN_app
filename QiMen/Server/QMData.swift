@@ -38,6 +38,8 @@ class QMData {
     
     private let beginning = ["子":"甲子戊","戌":"甲戌己","申":"甲申庚","午":"甲午辛","辰":"甲辰壬","寅":"甲寅癸"]
     
+    private let shape = ["步斗","天门","阴兵","阳斗","丁甲","阴斗","人门","神位","地户","阴山","魂魄","遁形"]
+    
     private let clockwise = [3, 0, 1,
                              6, 4, 2,
                              7, 8, 5]
@@ -54,9 +56,25 @@ class QMData {
                          "寅","","戌",
                          "丑","子","亥"]
     
+    private let dzClock = [0, 1, 2, 5, 8, 11, 14, 13, 12, 9, 6, 3]
+    
+    private let dzAnti = [0, 3, 6, 9, 12, 13, 14, 11, 8, 5, 2, 1]
+    
     init() {
         setDic()
         
+    }
+    
+    public func getDZClock() -> [Int] {
+        return dzClock
+    }
+    
+    public func getDZAnti() -> [Int] {
+        return dzAnti
+    }
+    
+    public func getShape() -> [String] {
+        return shape
     }
     
     public func getDizhi() -> [String] {

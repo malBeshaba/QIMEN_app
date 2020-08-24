@@ -13,23 +13,32 @@ struct ShowView: View {
     @EnvironmentObject var setting: UserSetting
     var calendar = Calendar.current
     
+    /// 中间九宫
     var site = [6: 0, 7: 1, 8: 2,
                 11: 3, 12: 4, 13: 5,
                 16: 6, 17: 7, 18: 8]
     
+    /// 地支分布
     var d = [0: 1, 1: 2, 2: 3,
              3: 5, 4: -1, 5: 9,
              6: 10, 7: -1, 8: 14,
              9: 15, 10: -1, 11: 19,
              12: 21, 13: 22, 14: 23]
     
+    /// 九宫对应位置
     var s = [6, 7, 8, 11, 12, 13, 16, 17, 18]
     
-    var qm: QMStartManager {
+    /// 奇门生成器
+    var qm: QMGenerator {
 //        return QMStartManager(year: 2020, month: 8, day: 10, hour: 18, minute: 15)
         
 //        return QMStartManager(year: 2006, month: 5, day: 23, hour: 19, minute: 25)
-        return QMStartManager(year: calendar.component(.year, from: setting.date), month: calendar.component(.month, from: setting.date), day: calendar.component(.day, from: setting.date), hour: calendar.component(.hour, from: setting.time), minute: calendar.component(.minute, from: setting.time))
+        let y = calendar.component(.year, from: setting.date)
+        let mon = calendar.component(.month, from: setting.date)
+        let d = calendar.component(.day, from: setting.date)
+        let h = calendar.component(.hour, from: setting.time)
+        let min = calendar.component(.minute, from: setting.time)
+        return QMGenerator(year: y, month: mon, day: d, hour: h, minute: min)
     }
     
     
@@ -77,13 +86,15 @@ struct ShowView: View {
                     HStack {
                         if self.qm.enterTomb() != -1 {
                             if self.s[self.qm.enterTomb()] == index {
-                                Text("入墓")
+                                Text("墓")
                                     .foregroundColor(.blue)
                             }
                         }
-                        if self.s[self.qm.shot()] == index {
-                            Text("击刑")
-                                .foregroundColor(.green)
+                        if self.qm.shot() != -1 {
+                            if self.s[self.qm.shot()] == index {
+                                Text("刑")
+                                    .foregroundColor(.green)
+                            }
                         }
                         if self.isNothing(index) {
                             Image("k")
@@ -132,6 +143,10 @@ struct ShowView: View {
         }
     }
      
+    
+    /// 位置是否在中间九宫
+    /// - Parameter i: index
+    /// - Returns: Boolean
     func isInSite(_ i: Int) -> Bool {
         for t in s {
             if i == t {
@@ -141,6 +156,9 @@ struct ShowView: View {
         return false
     }
     
+    /// 是否为空亡
+    /// - Parameter i: index
+    /// - Returns: Boolean
     func isNothing(_ i: Int) -> Bool {
         for t in self.qm.getNothing() {
             if d[t] == i {
@@ -150,6 +168,9 @@ struct ShowView: View {
         return false
     }
     
+    /// 配置常量
+    /// - Parameter i: index
+    /// - Returns: Text
     func getAllIt(_ i: Int) -> String {
         var str = ""
         if self.d[self.qm.getIllSite()] == i {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class QMStartManager {
+class QMGenerator {
     private let data = QMData()
 
     private let year_datum = 1900
@@ -300,10 +300,11 @@ class QMStartManager {
     /// - Returns: 九宫
     func clothSkySite() -> [String] {
         var hourColumns = 0
+        let hour = String(getHourColumns().prefix(1)) != "甲" ? String(getHourColumns().prefix(1)): String(getBeginning().suffix(1))
         let earth = getRealEarth()
         var sky = getRealEarth()
         for i in 0..<9 {
-            if isInit(earth[i], String(getHourColumns().prefix(1))) {
+            if isInit(earth[i], hour) {
                 hourColumns = i
                 break
             }
@@ -343,11 +344,12 @@ class QMStartManager {
     /// - Returns: 九宫
     func clothSkySiteStar() -> [String] {
         var hourColumns = 0
+        let hour = String(getHourColumns().prefix(1)) != "甲" ? String(getHourColumns().prefix(1)): String(getBeginning().suffix(1))
         let earth = getRealEarth()
         var sky = data.getStar()
         let star = data.getStar()
         for i in 0..<9 {
-            if isInit(earth[i], String(getHourColumns().prefix(1)))  {
+            if isInit(earth[i], hour)  {
                 hourColumns = i
                 break
             }
@@ -379,9 +381,10 @@ class QMStartManager {
     /// - Returns: 八神为：值符、腾蛇、太阴、六合、白虎、玄武、九地、九天。这里八神顺序一个接一个的顺序是固定不变的。八神排列阳遁顺时针运转，阴遁逆时针运转。
     func clothGodSite() -> [String] {
         var hourColumns = 0
+        let hour = String(getHourColumns().prefix(1)) != "甲" ? String(getHourColumns().prefix(1)): String(getBeginning().suffix(1))
         let earth = clothEarthSite()
         for i in 0..<9 {
-            if earth[i] == String(getHourColumns().prefix(1)) {
+            if earth[i] == hour {
                 hourColumns = i
                 break
             }
@@ -533,7 +536,7 @@ class QMStartManager {
         for _ in 0..<9 {
             arr.append("")
         }
-        let first = String(getHourColumns().prefix(1))
+        let first = String(getHourColumns().prefix(1)) != "甲" ? String(getHourColumns().prefix(1)): String(getBeginning().suffix(1))
 //      值使门位置
         let dutyDoorNum: Int = {
             for i in 0..<clothDoorSite().count {
@@ -718,19 +721,23 @@ class QMStartManager {
     /// 击刑
     /// - Returns: 己二戊三，壬癸四，庚八辛九
     func shot() -> Int {
-        switch String(getBeginning().suffix(1)) {
-        case "己":
-            return 2
-        case "戊":
-            return 3
-        case "壬", "癸":
-            return 4
-        case "庚":
-            return 8
-        case "辛":
-            return 9
-        default:
-            return -1
-        }
+        let sky = clothSkySite()
+        if isInit(sky[data.getSite()[4]!], "壬") || isInit(sky[data.getSite()[4]!], "癸") { return data.getSite()[4]!}
+        else if isInit(sky[data.getSite()[3]!], "戊") { return data.getSite()[3]! }
+        else if isInit(sky[data.getSite()[2]!], "己") { return data.getSite()[2]! }
+        else if isInit(sky[data.getSite()[8]!], "庚") { return data.getSite()[8]! }
+        else if isInit(sky[data.getSite()[9]!], "辛") { return data.getSite()[9]! }
+        return -1
+    }
+    
+    /// 十二遁形
+    /// - Returns: 宫外地支位置
+    func getShape() -> [String] {
+        var result = data.getDizhi()
+        var dizhi = data.getDizhi()
+        var first = String(getHourColumns().suffix(1))
+        
+//        var 
+        return result
     }
 }

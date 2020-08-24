@@ -17,7 +17,7 @@
 		047135BB24A8762B004BD068 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047135BA24A8762B004BD068 /* Preview Assets.xcassets */; };
 		047135BE24A8762B004BD068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047135BC24A8762B004BD068 /* LaunchScreen.storyboard */; };
 		047135C624A8765E004BD068 /* TNCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047135C524A8765E004BD068 /* TNCalendar.swift */; };
-		047135C824A87758004BD068 /* QMStartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047135C724A87758004BD068 /* QMStartManager.swift */; };
+		047135C824A87758004BD068 /* QMGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047135C724A87758004BD068 /* QMGenerator.swift */; };
 		048B59B424DC1DC4007F3DE8 /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B59B324DC1DC4007F3DE8 /* GridStack.swift */; };
 		048B59B624DC1DE9007F3DE8 /* GridCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B59B524DC1DE9007F3DE8 /* GridCalculator.swift */; };
 		048B59B824DC1E08007F3DE8 /* Array+chunked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B59B724DC1E08007F3DE8 /* Array+chunked.swift */; };
@@ -51,7 +51,7 @@
 		047135BD24A8762B004BD068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047135BF24A8762B004BD068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047135C524A8765E004BD068 /* TNCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNCalendar.swift; sourceTree = "<group>"; };
-		047135C724A87758004BD068 /* QMStartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QMStartManager.swift; sourceTree = "<group>"; };
+		047135C724A87758004BD068 /* QMGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QMGenerator.swift; sourceTree = "<group>"; };
 		048B59B324DC1DC4007F3DE8 /* GridStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
 		048B59B524DC1DE9007F3DE8 /* GridCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCalculator.swift; sourceTree = "<group>"; };
 		048B59B724DC1E08007F3DE8 /* Array+chunked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+chunked.swift"; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				047135C524A8765E004BD068 /* TNCalendar.swift */,
-				047135C724A87758004BD068 /* QMStartManager.swift */,
+				047135C724A87758004BD068 /* QMGenerator.swift */,
 				04CC66BB24AC906200DBA260 /* FixedSizeArray.swift */,
 				04CC014524A9CBF7003215F8 /* QMData.swift */,
 				04CC014724A9E0AA003215F8 /* SolarTerm.swift */,
@@ -281,7 +281,7 @@
 				04CC014624A9CBF7003215F8 /* QMData.swift in Sources */,
 				04A2848324E1370500A1B007 /* ContentView.swift in Sources */,
 				048B59B624DC1DE9007F3DE8 /* GridCalculator.swift in Sources */,
-				047135C824A87758004BD068 /* QMStartManager.swift in Sources */,
+				047135C824A87758004BD068 /* QMGenerator.swift in Sources */,
 				047135B124A87626004BD068 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
