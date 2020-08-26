@@ -42,6 +42,10 @@ class QMGenerator {
         self.lunar = TNCalendar.shared().solarToLunar(year, month, day)
     }
     
+    public func getSolar() -> String {
+        return "\(self.year!)年\(self.month!)月\(self.day!)日"
+    }
+    
     public func getLunar() -> String {
         return lunar
     }
@@ -734,10 +738,33 @@ class QMGenerator {
     /// - Returns: 宫外地支位置
     func getShape() -> [String] {
         var result = data.getDizhi()
-        var dizhi = data.getDizhi()
-        var first = String(getHourColumns().suffix(1))
+        let dizhi = data.getDizhi()
+        let first = String(getHourColumns().suffix(1))
+        let dzClock = getYY() == "阳" ? data.getDZClock(): data.getDZAnti()
+        /// 寻找时支对应位置
+        let hourBranch: Int = {
+            for i in 0..<data.getDizhi().count {
+                if first == data.getDizhi()[i] {
+                    return i
+                }
+            }
+            return -1
+        }()
         
-//        var 
+        /// 阳顺阴逆的排列序数
+        let gClock: Int = {
+            for i in 0..<dzClock.count {
+                if hourBranch == dzClock[i] {
+                    return i
+                }
+            }
+            return -1
+        }()
+        
+        for i in 0..<12 {
+            result[dzClock[(gClock + i) % 12]] = data.getShape()[i]
+        }
+        
         return result
     }
 }

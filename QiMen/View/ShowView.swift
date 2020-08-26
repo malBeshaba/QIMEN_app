@@ -25,6 +25,8 @@ struct ShowView: View {
              9: 15, 10: -1, 11: 19,
              12: 21, 13: 22, 14: 23]
     
+    var rd = [1: 0, 2: 1, 3: 2, 5: 3, 9: 5, 10: 6, 14: 8, 15: 9, 19: 11, 21: 12, 22: 13, 23: 14]
+    
     /// 九宫对应位置
     var s = [6, 7, 8, 11, 12, 13, 16, 17, 18]
     
@@ -45,6 +47,16 @@ struct ShowView: View {
     var body: some View {
         VStack {
             HStack {
+                Text("阳历")
+                    .foregroundColor(.red)
+                Text("\(qm.getSolar())")
+            }
+            HStack {
+                Text("阴历")
+                    .foregroundColor(.red)
+                Text("\(qm.getLunar())")
+            }
+            HStack {
                 Group {
                     Text("年 ")
                         .foregroundColor(.red)
@@ -52,13 +64,13 @@ struct ShowView: View {
                     Text("月 ")
                         .foregroundColor(.red)
                     Text(qm.getMonthColumns())
+                    Text("日 ")
+                        .foregroundColor(.red)
+                    Text(qm.getDayColumns())
+                    Text("时 ")
+                        .foregroundColor(.red)
+                    Text(qm.getHourColumns())
                 }
-                Text("日 ")
-                    .foregroundColor(.red)
-                Text(qm.getDayColumns())
-                Text("时 ")
-                    .foregroundColor(.red)
-                Text(qm.getHourColumns())
             }
             HStack {
                 Text("\(self.qm.getYY())")
@@ -84,18 +96,12 @@ struct ShowView: View {
             GridStack(minCellWidth: 66, spacing: 2, numItems: 25) { index, cellWeith in
                 VStack {
                     HStack {
-                        if self.qm.enterTomb() != -1 {
-                            if self.s[self.qm.enterTomb()] == index {
-                                Text("墓")
-                                    .foregroundColor(.blue)
-                            }
+                        self.getI(index)
+                        
+                        if self.rd[index] != nil {
+                            Text(self.qm.getShape()[self.rd[index]!])
                         }
-                        if self.qm.shot() != -1 {
-                            if self.s[self.qm.shot()] == index {
-                                Text("刑")
-                                    .foregroundColor(.green)
-                            }
-                        }
+                        
                         if self.isNothing(index) {
                             Image("k")
                                 .resizable()
@@ -192,6 +198,22 @@ struct ShowView: View {
             str += "马"
         }
         return str
+    }
+    
+    func getI(_ index: Int) -> Text {
+        if self.qm.enterTomb() != -1 {
+            if self.s[self.qm.enterTomb()] == index {
+                return Text("墓")
+                       .foregroundColor(.blue)
+            }
+        }
+        if self.qm.shot() != -1 {
+            if self.s[self.qm.shot()] == index {
+                return Text("刑")
+                       .foregroundColor(.green)
+            }
+        }
+        return Text("")
     }
     
 }
