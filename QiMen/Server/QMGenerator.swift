@@ -499,7 +499,7 @@ class QMGenerator {
             }
             
         }
-        if site == 0 {
+        if getYY() != "阳" {
             site += 1
         }
 //      宫数对应的位置
